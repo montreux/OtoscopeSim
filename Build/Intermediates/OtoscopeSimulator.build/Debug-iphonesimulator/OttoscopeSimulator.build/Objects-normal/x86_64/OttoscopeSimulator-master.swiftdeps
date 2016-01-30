@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "0376cb307dd8ec16baeaa100d0de6f3e"
+build_time: [507474464, 394540000]
+inputs:
+  "/Users/johnholcroft/Dropbox/Otoscope Simulator - Cardiff Hackday/iOS 2D App/OtoscopeSimulator/OtoscopeSimulator/AppDelegate.swift": [507469513, 0]
+  "/Users/johnholcroft/Dropbox/Otoscope Simulator - Cardiff Hackday/iOS 2D App/OtoscopeSimulator/OtoscopeSimulator/SimulatorViewController.swift": [507472658, 0]

@@ -1,0 +1,376 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SimulatorViewController"
+provides-nominal:
+- "C17OtoscopeSimulator23SimulatorViewController"
+provides-member:
+- ["C17OtoscopeSimulator23SimulatorViewController", ""]
+provides-dynamic-lookup:
+- "xSlider"
+- "yCentreConstraint"
+- "maxConstraintValue"
+- "ottoscopeImageView"
+- "ySliderValueChanged"
+- "xCentreConstraint"
+- "ySlider"
+- "xSliderValueChanged"
+depends-top-level:
+- "UISlider"
+- !private "UIScreen"
+- "UIImageView"
+- !private "-"
+- !private "*"
+- "UIViewController"
+- "CGFloat"
+- "NSLayoutConstraint"
+- "SimulatorViewController"
+depends-member:
+- !private ["PSs16AbsoluteValuable", "init"]
+- !private ["PSs9AnyObject", "CGFloat"]
+- !private ["PSs9AnyObject", "UIScreen"]
+- !private ["PSs9AnyObject", "bounds"]
+- !private ["PSs9AnyObject", "constant"]
+- !private ["PSs9AnyObject", "frame"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "mainScreen"]
+- ["PSs9AnyObject", "maxConstraintValue"]
+- ["PSs9AnyObject", "ottoscopeImageView"]
+- !private ["PSs9AnyObject", "value"]
+- ["PSs9AnyObject", "xCentreConstraint"]
+- ["PSs9AnyObject", "xSlider"]
+- ["PSs9AnyObject", "xSliderValueChanged"]
+- ["PSs9AnyObject", "yCentreConstraint"]
+- ["PSs9AnyObject", "ySlider"]
+- ["PSs9AnyObject", "ySliderValueChanged"]
+- ["PSs9AnyObject", ""]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["V12CoreGraphics7CGFloat", "init"]
+- !private ["VSC6CGRect", "height"]
+- !private ["PSs11CVarArgType", "CGFloat"]
+- !private ["PSs11CVarArgType", "UIScreen"]
+- !private ["PSs11CVarArgType", "bounds"]
+- !private ["PSs11CVarArgType", "constant"]
+- !private ["PSs11CVarArgType", "frame"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "mainScreen"]
+- ["PSs11CVarArgType", "maxConstraintValue"]
+- ["PSs11CVarArgType", "ottoscopeImageView"]
+- !private ["PSs11CVarArgType", "value"]
+- ["PSs11CVarArgType", "xCentreConstraint"]
+- ["PSs11CVarArgType", "xSlider"]
+- ["PSs11CVarArgType", "xSliderValueChanged"]
+- ["PSs11CVarArgType", "yCentreConstraint"]
+- ["PSs11CVarArgType", "ySlider"]
+- ["PSs11CVarArgType", "ySliderValueChanged"]
+- ["PSs11CVarArgType", ""]
+- !private ["PSs10Comparable", "init"]
+- !private ["PSs23CustomStringConvertible", "CGFloat"]
+- !private ["PSs23CustomStringConvertible", "UIScreen"]
+- !private ["PSs23CustomStringConvertible", "bounds"]
+- !private ["PSs23CustomStringConvertible", "constant"]
+- !private ["PSs23CustomStringConvertible", "frame"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "mainScreen"]
+- ["PSs23CustomStringConvertible", "maxConstraintValue"]
+- ["PSs23CustomStringConvertible", "ottoscopeImageView"]
+- !private ["PSs23CustomStringConvertible", "value"]
+- ["PSs23CustomStringConvertible", "xCentreConstraint"]
+- ["PSs23CustomStringConvertible", "xSlider"]
+- ["PSs23CustomStringConvertible", "xSliderValueChanged"]
+- ["PSs23CustomStringConvertible", "yCentreConstraint"]
+- ["PSs23CustomStringConvertible", "ySlider"]
+- ["PSs23CustomStringConvertible", "ySliderValueChanged"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["PSs9Equatable", "CGFloat"]
+- !private ["PSs9Equatable", "UIScreen"]
+- !private ["PSs9Equatable", "bounds"]
+- !private ["PSs9Equatable", "constant"]
+- !private ["PSs9Equatable", "frame"]
+- !private ["PSs9Equatable", "height"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "mainScreen"]
+- ["PSs9Equatable", "maxConstraintValue"]
+- ["PSs9Equatable", "ottoscopeImageView"]
+- !private ["PSs9Equatable", "value"]
+- ["PSs9Equatable", "xCentreConstraint"]
+- ["PSs9Equatable", "xSlider"]
+- ["PSs9Equatable", "xSliderValueChanged"]
+- ["PSs9Equatable", "yCentreConstraint"]
+- ["PSs9Equatable", "ySlider"]
+- ["PSs9Equatable", "ySliderValueChanged"]
+- ["PSs9Equatable", ""]
+- !private ["PSs23FloatLiteralConvertible", "init"]
+- !private ["PSs17FloatingPointType", "init"]
+- !private ["PSs8Hashable", "CGFloat"]
+- !private ["PSs8Hashable", "UIScreen"]
+- !private ["PSs8Hashable", "bounds"]
+- !private ["PSs8Hashable", "constant"]
+- !private ["PSs8Hashable", "frame"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "mainScreen"]
+- ["PSs8Hashable", "maxConstraintValue"]
+- ["PSs8Hashable", "ottoscopeImageView"]
+- !private ["PSs8Hashable", "value"]
+- ["PSs8Hashable", "xCentreConstraint"]
+- ["PSs8Hashable", "xSlider"]
+- ["PSs8Hashable", "xSliderValueChanged"]
+- ["PSs8Hashable", "yCentreConstraint"]
+- ["PSs8Hashable", "ySlider"]
+- ["PSs8Hashable", "ySliderValueChanged"]
+- ["PSs8Hashable", ""]
+- !private ["PSs25IntegerLiteralConvertible", "init"]
+- !private ["PSo8NSCoding", "CGFloat"]
+- !private ["PSo8NSCoding", "UIScreen"]
+- !private ["PSo8NSCoding", "frame"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "maxConstraintValue"]
+- ["PSo8NSCoding", "ottoscopeImageView"]
+- !private ["PSo8NSCoding", "value"]
+- ["PSo8NSCoding", "xCentreConstraint"]
+- ["PSo8NSCoding", "xSlider"]
+- ["PSo8NSCoding", "xSliderValueChanged"]
+- ["PSo8NSCoding", "yCentreConstraint"]
+- ["PSo8NSCoding", "ySlider"]
+- ["PSo8NSCoding", "ySliderValueChanged"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "CGFloat"]
+- !private ["PSo26NSExtensionRequestHandling", "UIScreen"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "maxConstraintValue"]
+- ["PSo26NSExtensionRequestHandling", "ottoscopeImageView"]
+- ["PSo26NSExtensionRequestHandling", "xCentreConstraint"]
+- ["PSo26NSExtensionRequestHandling", "xSlider"]
+- ["PSo26NSExtensionRequestHandling", "xSliderValueChanged"]
+- ["PSo26NSExtensionRequestHandling", "yCentreConstraint"]
+- ["PSo26NSExtensionRequestHandling", "ySlider"]
+- ["PSo26NSExtensionRequestHandling", "ySliderValueChanged"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["CSo18NSLayoutConstraint", "constant"]
+- ["CSo8NSObject", "CGFloat"]
+- ["CSo8NSObject", "NSLayoutConstraint"]
+- ["CSo8NSObject", "UIImageView"]
+- !private ["CSo8NSObject", "UIScreen"]
+- ["CSo8NSObject", "UISlider"]
+- !private ["CSo8NSObject", "bounds"]
+- !private ["CSo8NSObject", "constant"]
+- !private ["CSo8NSObject", "frame"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "mainScreen"]
+- ["CSo8NSObject", "maxConstraintValue"]
+- ["CSo8NSObject", "ottoscopeImageView"]
+- !private ["CSo8NSObject", "value"]
+- ["CSo8NSObject", "xCentreConstraint"]
+- ["CSo8NSObject", "xSlider"]
+- ["CSo8NSObject", "xSliderValueChanged"]
+- ["CSo8NSObject", "yCentreConstraint"]
+- ["CSo8NSObject", "ySlider"]
+- ["CSo8NSObject", "ySliderValueChanged"]
+- !private ["PSo16NSObjectProtocol", "CGFloat"]
+- !private ["PSo16NSObjectProtocol", "UIScreen"]
+- !private ["PSo16NSObjectProtocol", "bounds"]
+- !private ["PSo16NSObjectProtocol", "constant"]
+- !private ["PSo16NSObjectProtocol", "frame"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "mainScreen"]
+- ["PSo16NSObjectProtocol", "maxConstraintValue"]
+- ["PSo16NSObjectProtocol", "ottoscopeImageView"]
+- !private ["PSo16NSObjectProtocol", "value"]
+- ["PSo16NSObjectProtocol", "xCentreConstraint"]
+- ["PSo16NSObjectProtocol", "xSlider"]
+- ["PSo16NSObjectProtocol", "xSliderValueChanged"]
+- ["PSo16NSObjectProtocol", "yCentreConstraint"]
+- ["PSo16NSObjectProtocol", "ySlider"]
+- ["PSo16NSObjectProtocol", "ySliderValueChanged"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSs16SignedNumberType", "init"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "CGFloat"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "NSLayoutConstraint"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "UIImageView"]
+- !private ["C17OtoscopeSimulator23SimulatorViewController", "UIScreen"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "UISlider"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "deinit"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "init"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "maxConstraintValue"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "ottoscopeImageView"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "xCentreConstraint"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "xSlider"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "xSliderValueChanged"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "yCentreConstraint"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "ySlider"]
+- ["C17OtoscopeSimulator23SimulatorViewController", "ySliderValueChanged"]
+- !private ["PSs10Strideable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "frame"]
+- !private ["PSo29UIAccessibilityIdentification", "value"]
+- !private ["PSo12UIAppearance", "frame"]
+- !private ["PSo12UIAppearance", "value"]
+- !private ["PSo21UIAppearanceContainer", "CGFloat"]
+- !private ["PSo21UIAppearanceContainer", "UIScreen"]
+- !private ["PSo21UIAppearanceContainer", "frame"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "maxConstraintValue"]
+- ["PSo21UIAppearanceContainer", "ottoscopeImageView"]
+- !private ["PSo21UIAppearanceContainer", "value"]
+- ["PSo21UIAppearanceContainer", "xCentreConstraint"]
+- ["PSo21UIAppearanceContainer", "xSlider"]
+- ["PSo21UIAppearanceContainer", "xSliderValueChanged"]
+- ["PSo21UIAppearanceContainer", "yCentreConstraint"]
+- ["PSo21UIAppearanceContainer", "ySlider"]
+- ["PSo21UIAppearanceContainer", "ySliderValueChanged"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "CGFloat"]
+- !private ["PSo18UIContentContainer", "UIScreen"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "maxConstraintValue"]
+- ["PSo18UIContentContainer", "ottoscopeImageView"]
+- ["PSo18UIContentContainer", "xCentreConstraint"]
+- ["PSo18UIContentContainer", "xSlider"]
+- ["PSo18UIContentContainer", "xSliderValueChanged"]
+- ["PSo18UIContentContainer", "yCentreConstraint"]
+- ["PSo18UIContentContainer", "ySlider"]
+- ["PSo18UIContentContainer", "ySliderValueChanged"]
+- ["PSo18UIContentContainer", ""]
+- !private ["CSo9UIControl", "value"]
+- !private ["PSo17UICoordinateSpace", "frame"]
+- !private ["PSo17UICoordinateSpace", "value"]
+- !private ["PSo13UIDynamicItem", "frame"]
+- !private ["PSo13UIDynamicItem", "value"]
+- !private ["PSo18UIFocusEnvironment", "CGFloat"]
+- !private ["PSo18UIFocusEnvironment", "UIScreen"]
+- !private ["PSo18UIFocusEnvironment", "frame"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "maxConstraintValue"]
+- ["PSo18UIFocusEnvironment", "ottoscopeImageView"]
+- !private ["PSo18UIFocusEnvironment", "value"]
+- ["PSo18UIFocusEnvironment", "xCentreConstraint"]
+- ["PSo18UIFocusEnvironment", "xSlider"]
+- ["PSo18UIFocusEnvironment", "xSliderValueChanged"]
+- ["PSo18UIFocusEnvironment", "yCentreConstraint"]
+- ["PSo18UIFocusEnvironment", "ySlider"]
+- ["PSo18UIFocusEnvironment", "ySliderValueChanged"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo11UIImageView", "frame"]
+- ["CSo11UIResponder", "CGFloat"]
+- ["CSo11UIResponder", "NSLayoutConstraint"]
+- ["CSo11UIResponder", "UIImageView"]
+- !private ["CSo11UIResponder", "UIScreen"]
+- ["CSo11UIResponder", "UISlider"]
+- !private ["CSo11UIResponder", "frame"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "maxConstraintValue"]
+- ["CSo11UIResponder", "ottoscopeImageView"]
+- !private ["CSo11UIResponder", "value"]
+- ["CSo11UIResponder", "xCentreConstraint"]
+- ["CSo11UIResponder", "xSlider"]
+- ["CSo11UIResponder", "xSliderValueChanged"]
+- ["CSo11UIResponder", "yCentreConstraint"]
+- ["CSo11UIResponder", "ySlider"]
+- ["CSo11UIResponder", "ySliderValueChanged"]
+- !private ["CSo8UIScreen", "bounds"]
+- !private ["CSo8UIScreen", "mainScreen"]
+- !private ["CSo8UISlider", "value"]
+- !private ["PSo16UIStateRestoring", "CGFloat"]
+- !private ["PSo16UIStateRestoring", "UIScreen"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "maxConstraintValue"]
+- ["PSo16UIStateRestoring", "ottoscopeImageView"]
+- ["PSo16UIStateRestoring", "xCentreConstraint"]
+- ["PSo16UIStateRestoring", "xSlider"]
+- ["PSo16UIStateRestoring", "xSliderValueChanged"]
+- ["PSo16UIStateRestoring", "yCentreConstraint"]
+- ["PSo16UIStateRestoring", "ySlider"]
+- ["PSo16UIStateRestoring", "ySliderValueChanged"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "CGFloat"]
+- !private ["PSo18UITraitEnvironment", "UIScreen"]
+- !private ["PSo18UITraitEnvironment", "bounds"]
+- !private ["PSo18UITraitEnvironment", "frame"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "mainScreen"]
+- ["PSo18UITraitEnvironment", "maxConstraintValue"]
+- ["PSo18UITraitEnvironment", "ottoscopeImageView"]
+- !private ["PSo18UITraitEnvironment", "value"]
+- ["PSo18UITraitEnvironment", "xCentreConstraint"]
+- ["PSo18UITraitEnvironment", "xSlider"]
+- ["PSo18UITraitEnvironment", "xSliderValueChanged"]
+- ["PSo18UITraitEnvironment", "yCentreConstraint"]
+- ["PSo18UITraitEnvironment", "ySlider"]
+- ["PSo18UITraitEnvironment", "ySliderValueChanged"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "frame"]
+- !private ["CSo6UIView", "value"]
+- ["CSo16UIViewController", "CGFloat"]
+- ["CSo16UIViewController", "NSLayoutConstraint"]
+- ["CSo16UIViewController", "UIImageView"]
+- !private ["CSo16UIViewController", "UIScreen"]
+- ["CSo16UIViewController", "UISlider"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "maxConstraintValue"]
+- ["CSo16UIViewController", "ottoscopeImageView"]
+- ["CSo16UIViewController", "xCentreConstraint"]
+- ["CSo16UIViewController", "xSlider"]
+- ["CSo16UIViewController", "xSliderValueChanged"]
+- ["CSo16UIViewController", "yCentreConstraint"]
+- ["CSo16UIViewController", "ySlider"]
+- ["CSo16UIViewController", "ySliderValueChanged"]
+- ["CSo16UIViewController", ""]
+- !private ["PSs19_CVarArgAlignedType", "init"]
+- !private ["PSs22_CVarArgPassedAsDouble", "init"]
+- !private ["PSs21_ObjectiveCBridgeable", "init"]
+- !private ["PSs12_Reflectable", "frame"]
+- !private ["PSs12_Reflectable", "height"]
+- !private ["PSs12_Reflectable", "init"]
+- !private ["PSs12_Reflectable", "value"]
+- !private ["PSs11_Strideable", "init"]
+depends-nominal:
+- !private "PSs16AbsoluteValuable"
+- "PSs9AnyObject"
+- !private "V12CoreGraphics7CGFloat"
+- !private "VSC6CGRect"
+- "PSs11CVarArgType"
+- !private "PSs10Comparable"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- !private "PSs23FloatLiteralConvertible"
+- !private "PSs17FloatingPointType"
+- "PSs8Hashable"
+- !private "PSs25IntegerLiteralConvertible"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- !private "CSo18NSLayoutConstraint"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSs16SignedNumberType"
+- "C17OtoscopeSimulator23SimulatorViewController"
+- !private "PSs10Strideable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "CSo9UIControl"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "CSo11UIImageView"
+- "CSo11UIResponder"
+- !private "CSo8UIScreen"
+- !private "CSo8UISlider"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "PSs19_CVarArgAlignedType"
+- !private "PSs22_CVarArgPassedAsDouble"
+- !private "PSs21_ObjectiveCBridgeable"
+- !private "PSs12_Reflectable"
+- !private "PSs11_Strideable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+interface-hash: "62fde23bfc5cfc8d26dfa214edbb66f9"
