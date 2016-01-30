@@ -19,6 +19,7 @@ class SimulatorViewController: UIViewController {
     
     let motionManager = CMMotionManager()
     var centreYawValue:Double?
+    var startXCentreConstraintConstant:CGFloat = 0
     
     var maxConstraintValue:CGFloat {
         return UIScreen.mainScreen().bounds.height - ottoscopeImageView.frame.height
@@ -26,6 +27,7 @@ class SimulatorViewController: UIViewController {
     
     override func viewDidLoad() {
         self.earImageView.hidden = true
+        startXCentreConstraintConstant = self.xCentreConstraint.constant
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -45,7 +47,7 @@ class SimulatorViewController: UIViewController {
             }
             
             sSelf.yCentreConstraint.constant = sSelf.attitudeValueToConstraintValue(deviceMotion.attitude.roll, centreValue: M_PI_2)
-            sSelf.xCentreConstraint.constant = sSelf.attitudeValueToConstraintValue(deviceMotion.attitude.yaw, centreValue: sSelf.centreYawValue!)
+            sSelf.xCentreConstraint.constant = sSelf.startXCentreConstraintConstant + sSelf.attitudeValueToConstraintValue(deviceMotion.attitude.yaw, centreValue: sSelf.centreYawValue!)
             sSelf.earImageView.transform = CGAffineTransformMakeRotation(CGFloat(deviceMotion.attitude.pitch))
         }
     }
@@ -66,6 +68,7 @@ class SimulatorViewController: UIViewController {
 
         return newConstraintValue
     }
+    
     @IBAction func thumbDown(sender: AnyObject) {
         startOtoscope()
     }

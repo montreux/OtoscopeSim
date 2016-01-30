@@ -115,7 +115,7 @@ here</string>
                         <outlet property="earImageView" destination="Cyl-Iu-XeD" id="XpW-pC-Pw4"/>
                         <outlet property="holdThumbHereLabel" destination="sic-2J-61C" id="K5V-o0-mFg"/>
                         <outlet property="ottoscopeImageView" destination="l2J-Pv-YWl" id="X78-ch-frE"/>
-                        <outlet property="xCentreConstraint" destination="Lcr-0a-D9I" id="9hO-dU-F05"/>
+                        <outlet property="xCentreConstraint" destination="8Nx-Ht-IYJ" id="FvC-SQ-8HM"/>
                         <outlet property="yCentreConstraint" destination="oOF-lP-tlm" id="ozQ-Pu-opV"/>
                     </connections>
                 </viewController>
