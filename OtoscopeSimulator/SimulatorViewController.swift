@@ -11,41 +11,21 @@ import CoreMotion
 
 class SimulatorViewController: UIViewController {
 
-    @IBOutlet weak var xSlider: UISlider!
-    @IBOutlet weak var ySlider: UISlider!
     @IBOutlet weak var ottoscopeImageView: UIImageView!
-    
+    @IBOutlet weak var earImageView: UIImageView!
     @IBOutlet weak var xCentreConstraint: NSLayoutConstraint!
     @IBOutlet weak var yCentreConstraint: NSLayoutConstraint!
-    
-    @IBOutlet weak var rollValueLabel: UILabel!
-    @IBOutlet weak var pitchValueLabel: UILabel!
-    @IBOutlet weak var yawValueLabel: UILabel!
-    
-    @IBOutlet weak var earImageView: UIImageView!
+    @IBOutlet weak var holdThumbHereLabel: UILabel!
     
     let motionManager = CMMotionManager()
+    var centreYawValue:Double?
     
     var maxConstraintValue:CGFloat {
         return UIScreen.mainScreen().bounds.height - ottoscopeImageView.frame.height
     }
-
-    @IBAction func xSliderValueChanged(sender: UISlider) {
-        let proportion = CGFloat(sender.value)
-        let newConstraintValue = (0.5 * maxConstraintValue) - proportion * maxConstraintValue
-        
-        xCentreConstraint.constant = newConstraintValue
-    }
-
-    @IBAction func ySliderValueChanged(sender: UISlider) {
-        let proportion = CGFloat(sender.value)
-        let newConstraintValue = (0.5 * maxConstraintValue) - proportion * maxConstraintValue
-        
-        yCentreConstraint.constant = newConstraintValue
-    }
     
-    override func viewDidAppear(animated: Bool) {
-        startHandlingAttitudeChanges()
+    override func viewDidLoad() {
+        self.earImageView.hidden = true
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -60,31 +40,52 @@ class SimulatorViewController: UIViewController {
             
             guard let deviceMotion = deviceMotion, let sSelf = self else { return }
             
-            sSelf.rollValueLabel.text = String(format:"%.2f", deviceMotion.attitude.roll)
-            sSelf.yCentreConstraint.constant = sSelf.rollValueToConstraintValue(deviceMotion.attitude.roll)
+            if sSelf.centreYawValue == nil {
+                sSelf.centreYawValue = deviceMotion.attitude.yaw
+            }
             
-            sSelf.yawValueLabel.text = String(format:"%.2f", deviceMotion.attitude.yaw)
-            
-            sSelf.pitchValueLabel.text = String(format:"%.2f", deviceMotion.attitude.pitch)
+            sSelf.yCentreConstraint.constant = sSelf.attitudeValueToConstraintValue(deviceMotion.attitude.roll, centreValue: M_PI_2)
+            sSelf.xCentreConstraint.constant = sSelf.attitudeValueToConstraintValue(deviceMotion.attitude.yaw, centreValue: sSelf.centreYawValue!)
             sSelf.earImageView.transform = CGAffineTransformMakeRotation(CGFloat(deviceMotion.attitude.pitch))
         }
     }
     
-    func rollValueToConstraintValue(rollValue:Double) -> CGFloat {
-        let minRollValue = M_PI_2 - 0.2
-        let maxRollValue = M_PI_2 + 0.2
+    func attitudeValueToConstraintValue(currentValue:Double, centreValue:Double) -> CGFloat {
+        let minValue = centreValue - 0.2
+        let maxValue = centreValue + 0.2
         
-        guard rollValue > minRollValue else { return proportionToConstraintValue(1) }
-        guard rollValue < maxRollValue else { return proportionToConstraintValue(0) }
+        guard currentValue > minValue else { return proportionToConstraintValue(1) }
+        guard currentValue < maxValue else { return proportionToConstraintValue(0) }
 
-        let rollProportion = (maxRollValue - rollValue) / (maxRollValue - minRollValue)
-        return proportionToConstraintValue(rollProportion)
+        let proportion = (maxValue - currentValue) / (maxValue - minValue)
+        return proportionToConstraintValue(proportion)
     }
     
     func proportionToConstraintValue(proportion:Double) -> CGFloat {
         let newConstraintValue = (0.5 * maxConstraintValue) - CGFloat(proportion) * maxConstraintValue
 
         return newConstraintValue
+    }
+    @IBAction func thumbDown(sender: AnyObject) {
+        startOtoscope()
+    }
+    
+    @IBAction func thumbUp(sender: AnyObject) {
+        stopOtoscope()
+    }
+    @IBAction func thumbUpOutside(sender: AnyObject) {
+        stopOtoscope()
+    }
+    
+    func startOtoscope() {
+        self.earImageView.hidden = false
+        centreYawValue = nil
+        startHandlingAttitudeChanges()
+    }
+    
+    func stopOtoscope() {
+        self.earImageView.hidden = true
+        self.motionManager.stopDeviceMotionUpdates()
     }
 }
 
