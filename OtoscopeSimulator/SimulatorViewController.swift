@@ -16,6 +16,7 @@ class SimulatorViewController: UIViewController {
     @IBOutlet weak var xCentreConstraint: NSLayoutConstraint!
     @IBOutlet weak var yCentreConstraint: NSLayoutConstraint!
     @IBOutlet weak var holdThumbHereLabel: UILabel!
+    @IBOutlet weak var moveOnLabel: UILabel!
     
     let motionManager = CMMotionManager()
     var centreYawValue:Double?
@@ -53,8 +54,8 @@ class SimulatorViewController: UIViewController {
     }
     
     func attitudeValueToConstraintValue(currentValue:Double, centreValue:Double) -> CGFloat {
-        let minValue = centreValue - 0.2
-        let maxValue = centreValue + 0.2
+        let minValue = centreValue - 0.3
+        let maxValue = centreValue + 0.3
         
         guard currentValue > minValue else { return proportionToConstraintValue(1) }
         guard currentValue < maxValue else { return proportionToConstraintValue(0) }
@@ -82,6 +83,8 @@ class SimulatorViewController: UIViewController {
     
     func startOtoscope() {
         self.earImageView.hidden = false
+        self.holdThumbHereLabel.hidden = true
+        self.moveOnLabel.hidden = false
         centreYawValue = nil
         startHandlingAttitudeChanges()
     }
@@ -89,6 +92,7 @@ class SimulatorViewController: UIViewController {
     func stopOtoscope() {
         self.earImageView.hidden = true
         self.motionManager.stopDeviceMotionUpdates()
+        self.moveOnLabel.hidden = true
     }
 }
 
