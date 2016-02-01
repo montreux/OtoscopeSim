@@ -17,6 +17,8 @@ class SimulatorViewController: UIViewController {
     @IBOutlet weak var yCentreConstraint: NSLayoutConstraint!
     @IBOutlet weak var holdThumbHereLabel: UILabel!
     @IBOutlet weak var moveOnLabel: UILabel!
+    @IBOutlet weak var answersLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var answersTableView: UITableView!
     
     let motionManager = CMMotionManager()
     var centreYawValue:Double?
@@ -28,7 +30,11 @@ class SimulatorViewController: UIViewController {
     
     override func viewDidLoad() {
         self.earImageView.hidden = true
+        self.answersLeftConstraint.constant = -self.answersTableView.frame.width
         startXCentreConstraintConstant = self.xCentreConstraint.constant
+        
+        self.answersTableView.dataSource = self
+        self.answersTableView.delegate = self
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -87,12 +93,69 @@ class SimulatorViewController: UIViewController {
         self.moveOnLabel.hidden = false
         centreYawValue = nil
         startHandlingAttitudeChanges()
+        
+        self.view.layer.removeAllAnimations()
+        
+        UIView.animateWithDuration(0.3) {
+            self.answersLeftConstraint.constant = -self.answersTableView.frame.width
+            self.view.layoutIfNeeded()
+        }
     }
     
     func stopOtoscope() {
         self.earImageView.hidden = true
         self.motionManager.stopDeviceMotionUpdates()
         self.moveOnLabel.hidden = true
+        
+        self.view.layer.removeAllAnimations()
+        
+        UIView.animateWithDuration(0.3) {
+            self.answersLeftConstraint.constant = 0
+            self.view.layoutIfNeeded()
+        }
+
     }
 }
 
+extension SimulatorViewController : UITableViewDataSource {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! AnswerCellView
+        
+        switch indexPath.row {
+        case 0:
+            cell.answerLabel.text = "Normal"
+            break
+        case 1:
+            cell.answerLabel.text = "Glomus tumour"
+            break
+        case 2:
+            cell.answerLabel.text = "Haemotympanum"
+            break
+        case 3:
+            cell.answerLabel.text = "Glomus tumour"
+            break
+        case 4:
+            cell.answerLabel.text = "Acute otitis media"
+            break
+        default:
+            cell.answerLabel.text = "Unknown"
+        }
+        
+        return cell
+    }
+}
+
+extension SimulatorViewController : UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        guard let revealViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RevealViewController") as? RevealViewController else { return }
+        
+        let isRightAnswer = (indexPath.row == 4)
+        revealViewController.isRightAnswer = isRightAnswer
+
+        self.presentViewController(revealViewController, animated: true, completion: nil)
+    }
+}

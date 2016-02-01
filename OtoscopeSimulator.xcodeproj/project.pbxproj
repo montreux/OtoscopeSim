@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11D7DFA1C5E2DC2000E5106 /* AnswerCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D7DF91C5E2DC2000E5106 /* AnswerCellView.swift */; };
+		A11D7DFC1C5E3E8D000E5106 /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D7DFB1C5E3E8D000E5106 /* RevealViewController.swift */; };
 		A14FE5311C5CD9C900C55D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14FE5301C5CD9C900C55D0F /* AppDelegate.swift */; };
 		A14FE5331C5CD9C900C55D0F /* SimulatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14FE5321C5CD9C900C55D0F /* SimulatorViewController.swift */; };
 		A14FE5361C5CD9C900C55D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14FE5341C5CD9C900C55D0F /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A11D7DF91C5E2DC2000E5106 /* AnswerCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCellView.swift; sourceTree = "<group>"; };
+		A11D7DFB1C5E3E8D000E5106 /* RevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealViewController.swift; sourceTree = "<group>"; };
 		A14FE52D1C5CD9C900C55D0F /* OtoscopeSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtoscopeSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14FE5301C5CD9C900C55D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A14FE5321C5CD9C900C55D0F /* SimulatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				A14FE5371C5CD9C900C55D0F /* Assets.xcassets */,
 				A14FE5391C5CD9C900C55D0F /* LaunchScreen.storyboard */,
 				A14FE53C1C5CD9C900C55D0F /* Info.plist */,
+				A11D7DF91C5E2DC2000E5106 /* AnswerCellView.swift */,
+				A11D7DFB1C5E3E8D000E5106 /* RevealViewController.swift */,
 			);
 			path = OtoscopeSimulator;
 			sourceTree = "<group>";
@@ -258,7 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A14FE5331C5CD9C900C55D0F /* SimulatorViewController.swift in Sources */,
+				A11D7DFA1C5E2DC2000E5106 /* AnswerCellView.swift in Sources */,
 				A14FE5311C5CD9C900C55D0F /* AppDelegate.swift in Sources */,
+				A11D7DFC1C5E3E8D000E5106 /* RevealViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
