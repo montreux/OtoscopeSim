@@ -10,8 +10,12 @@ import UIKit
 
 class RevealViewController : UIViewController {
     var isRightAnswer = true
+    var condition:Condition!
     
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var conditionNameLabel: UILabel!
+    @IBOutlet weak var conditionDescriptionLabel: UILabel!
+    @IBOutlet weak var conditionImage: UIImageView!
     
     override func viewDidLoad() {
         if isRightAnswer {
@@ -19,5 +23,13 @@ class RevealViewController : UIViewController {
         } else {
             resultLabel.text = "Sorry! It was actually:"
         }
+        
+        conditionNameLabel.text = condition.name
+        conditionDescriptionLabel.text = condition.informationText
+        conditionImage.image = UIImage(named: condition.thumbnailName)
+    }
+    
+    @IBAction func nextButtonPressed(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

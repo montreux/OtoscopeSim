@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ify-jJ-anm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ify-jJ-anm">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -249,47 +249,6 @@ here</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="TVL-J0-t2p">
-                                <rect key="frame" x="0.0" y="0.0" width="168" height="375"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="168" id="FkY-sP-fB9"/>
-                                    <constraint firstAttribute="height" constant="375" id="xlV-3b-iaB"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="LBn-gH-ak6" customClass="AnswerCellView" customModule="OtoscopeSimulator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="49.5" width="168" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalCompressionResistancePriority="1000" tableViewCell="LBn-gH-ak6" id="KcI-SG-nQq">
-                                            <rect key="frame" x="0.0" y="0.0" width="168" height="59.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Otitis media with effusion" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKg-Wv-ugi">
-                                                    <rect key="frame" x="8" y="8" width="152" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="eKg-Wv-ugi" firstAttribute="leading" secondItem="KcI-SG-nQq" secondAttribute="leading" constant="8" id="Q0U-q6-h2x"/>
-                                                <constraint firstItem="eKg-Wv-ugi" firstAttribute="top" secondItem="KcI-SG-nQq" secondAttribute="top" constant="8" id="bPg-VH-JzO"/>
-                                                <constraint firstAttribute="bottom" secondItem="eKg-Wv-ugi" secondAttribute="bottom" constant="8" id="seB-Ef-PqS"/>
-                                                <constraint firstAttribute="trailing" secondItem="eKg-Wv-ugi" secondAttribute="trailing" constant="8" id="y8C-nf-xkt"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="answerLabel" destination="eKg-Wv-ugi" id="byP-Pn-xHl"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="xlV-3b-iaB"/>
-                                    </mask>
-                                </variation>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -300,7 +259,6 @@ here</string>
                             <constraint firstItem="GdB-ZC-wJG" firstAttribute="top" secondItem="inp-Cl-VHx" secondAttribute="bottom" id="BHM-2S-aOj"/>
                             <constraint firstItem="inp-Cl-VHx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Deh-Jq-dRm"/>
                             <constraint firstItem="H0j-eQ-0pB" firstAttribute="top" secondItem="l2J-Pv-YWl" secondAttribute="bottom" id="EaV-cX-HBI"/>
-                            <constraint firstItem="TVL-J0-t2p" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FFu-my-ENR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KAl-yv-3JG" secondAttribute="bottom" id="GbR-Pa-Lf3"/>
                             <constraint firstItem="l2J-Pv-YWl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="230" id="LP9-RN-qKl"/>
                             <constraint firstItem="Cyl-Iu-XeD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="220" id="Lcr-0a-D9I"/>
@@ -321,12 +279,10 @@ here</string>
                             <constraint firstItem="Cyl-Iu-XeD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lvy-Mv-Q2y"/>
                             <constraint firstAttribute="trailing" secondItem="n1o-I6-cfd" secondAttribute="trailing" id="nDj-kk-Bav"/>
                             <constraint firstItem="Cyl-Iu-XeD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oOF-lP-tlm"/>
-                            <constraint firstItem="TVL-J0-t2p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uZ4-0t-SgV"/>
                             <constraint firstItem="l2J-Pv-YWl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ui5-9E-vpt"/>
                             <constraint firstItem="jfd-tZ-v0c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="veL-XW-sJm"/>
                             <constraint firstItem="KAl-yv-3JG" firstAttribute="centerX" secondItem="l2J-Pv-YWl" secondAttribute="centerX" constant="-240" id="wms-ih-0Kt"/>
                             <constraint firstItem="jfd-tZ-v0c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wqV-s8-ctu"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TVL-J0-t2p" secondAttribute="bottom" id="yqa-xa-AzT"/>
                             <constraint firstAttribute="trailing" secondItem="l2J-Pv-YWl" secondAttribute="trailing" constant="43" id="z3D-oN-Zqp"/>
                         </constraints>
                         <variation key="default">
@@ -343,8 +299,6 @@ here</string>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="answersLeftConstraint" destination="uZ4-0t-SgV" id="1GJ-oa-R6L"/>
-                        <outlet property="answersTableView" destination="TVL-J0-t2p" id="PAu-qZ-ZMh"/>
                         <outlet property="earImageView" destination="Cyl-Iu-XeD" id="XpW-pC-Pw4"/>
                         <outlet property="holdThumbHereLabel" destination="sic-2J-61C" id="K5V-o0-mFg"/>
                         <outlet property="moveOnLabel" destination="jfd-tZ-v0c" id="G0g-Oe-laP"/>
@@ -369,14 +323,14 @@ here</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02_otitismedia_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-Ta-R1J">
-                                <rect key="frame" x="35.5" y="104.5" width="262.5" height="262.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="02_otitismedia_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-Ta-R1J">
+                                <rect key="frame" x="35" y="93" width="262.5" height="262.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zbq-Ta-R1J" secondAttribute="height" multiplier="1:1" id="Q7c-GD-Jnt"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acute otitis media" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlL-xS-d8Z">
-                                <rect key="frame" x="237" y="56.5" width="191.5" height="40"/>
+                                <rect key="frame" x="237" y="56" width="191.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -388,14 +342,15 @@ here</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lb-Ub-D8a">
-                                <rect key="frame" x="607" y="337" width="32" height="30"/>
+                                <rect key="frame" x="589" y="326" width="50" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="gXX-s5-yzd"/>
+                                    <action selector="nextButtonPressed:" destination="e4k-pC-PI0" eventType="touchUpInside" id="2gB-oq-w2s"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acute otitis media is an infection of the middle ear. Typically characterised by a bulging tympanic membrane." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYn-Xv-fkh">
-                                <rect key="frame" x="368.5" y="148" width="262.5" height="175.5"/>
+                                <rect key="frame" x="369.5" y="109" width="261.5" height="91"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -403,12 +358,13 @@ here</string>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zYn-Xv-fkh" firstAttribute="top" secondItem="Zbq-Ta-R1J" secondAttribute="top" constant="16" id="59H-OP-yTT"/>
                             <constraint firstItem="zYn-Xv-fkh" firstAttribute="leading" secondItem="Zbq-Ta-R1J" secondAttribute="trailing" constant="8" id="8Q2-1c-Wdf"/>
                             <constraint firstItem="Zbq-Ta-R1J" firstAttribute="centerX" secondItem="Atb-EK-8rG" secondAttribute="centerX" multiplier="1/2" id="A0A-BY-E7P"/>
                             <constraint firstItem="ZlL-xS-d8Z" firstAttribute="top" secondItem="5qL-sv-woF" secondAttribute="bottom" constant="8" id="AXf-WA-WxY"/>
-                            <constraint firstItem="la8-ko-ios" firstAttribute="top" secondItem="Zbq-Ta-R1J" secondAttribute="bottom" constant="8" id="BhM-Id-K5t"/>
+                            <constraint firstItem="la8-ko-ios" firstAttribute="top" secondItem="Zbq-Ta-R1J" secondAttribute="bottom" constant="24" id="BhM-Id-K5t"/>
                             <constraint firstItem="zYn-Xv-fkh" firstAttribute="centerX" secondItem="Atb-EK-8rG" secondAttribute="centerX" multiplier="3/2" id="Cs8-W9-ijf"/>
-                            <constraint firstItem="zYn-Xv-fkh" firstAttribute="centerY" secondItem="Zbq-Ta-R1J" secondAttribute="centerY" id="DwL-To-fbL"/>
+                            <constraint firstItem="zYn-Xv-fkh" firstAttribute="centerY" secondItem="Zbq-Ta-R1J" secondAttribute="centerY" multiplier="3/4" id="DwL-To-fbL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zYn-Xv-fkh" secondAttribute="trailing" constant="35" id="JXm-Ue-4aq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zYn-Xv-fkh" secondAttribute="trailing" constant="16" id="KPN-Vk-X7s"/>
                             <constraint firstItem="5qL-sv-woF" firstAttribute="centerX" secondItem="Atb-EK-8rG" secondAttribute="centerX" id="LKO-RH-pds"/>
@@ -423,15 +379,21 @@ here</string>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="BhM-Id-K5t"/>
                                 <exclude reference="8Q2-1c-Wdf"/>
+                                <exclude reference="DwL-To-fbL"/>
                                 <exclude reference="JXm-Ue-4aq"/>
                                 <exclude reference="mPo-Mq-w4Y"/>
+                                <exclude reference="yD8-8b-b8n"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="conditionDescriptionLabel" destination="zYn-Xv-fkh" id="bsH-1R-bo9"/>
+                        <outlet property="conditionImage" destination="Zbq-Ta-R1J" id="Zty-H9-KCU"/>
+                        <outlet property="conditionNameLabel" destination="ZlL-xS-d8Z" id="OqS-on-JxD"/>
                         <outlet property="resultLabel" destination="5qL-sv-woF" id="uz6-6l-Hk5"/>
                     </connections>
                 </viewController>
@@ -452,7 +414,4 @@ here</string>
         <image name="otoscope_held_drawing" width="186" height="100"/>
         <image name="phone_held_drawing" width="113" height="100"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="gXX-s5-yzd"/>
-    </inferredMetricsTieBreakers>
 </document>

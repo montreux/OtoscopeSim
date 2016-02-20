@@ -11,14 +11,15 @@ import CoreMotion
 
 class SimulatorViewController: UIViewController {
 
+    var presentedCondition:Condition = Conditions.Normal
+    var shownConditions:[String] = []
+    
     @IBOutlet weak var ottoscopeImageView: UIImageView!
     @IBOutlet weak var earImageView: UIImageView!
     @IBOutlet weak var xCentreConstraint: NSLayoutConstraint!
     @IBOutlet weak var yCentreConstraint: NSLayoutConstraint!
     @IBOutlet weak var holdThumbHereLabel: UILabel!
     @IBOutlet weak var moveOnLabel: UILabel!
-    @IBOutlet weak var answersLeftConstraint: NSLayoutConstraint!
-    @IBOutlet weak var answersTableView: UITableView!
     
     let motionManager = CMMotionManager()
     var centreYawValue:Double?
@@ -30,15 +31,42 @@ class SimulatorViewController: UIViewController {
     
     override func viewDidLoad() {
         self.earImageView.hidden = true
-        self.answersLeftConstraint.constant = -self.answersTableView.frame.width
         startXCentreConstraintConstant = self.xCentreConstraint.constant
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        guard (self.shownConditions.count != Conditions.TestSet.count) else {
+            self.dismissViewControllerAnimated(true, completion: nil)
+            return
+        }
         
-        self.answersTableView.dataSource = self
-        self.answersTableView.delegate = self
+        self.presentedCondition = self.chooseNextRandomCondition(from:Conditions.TestSet)
+        self.shownConditions.append(presentedCondition.name)
+
+        self.setConditionImage(presentedCondition.imageName)
+        self.holdThumbHereLabel.hidden = false
     }
     
     override func viewDidDisappear(animated: Bool) {
         self.motionManager.stopDeviceMotionUpdates()
+    }
+    
+    func chooseNextRandomCondition(from conditionSet:[Condition]) -> Condition {
+        
+        var chosenCondition:Condition!
+        
+        let maxRandom = UInt32(conditionSet.count)
+        
+        repeat {
+            let randomIndex = Int(arc4random_uniform(maxRandom))
+            chosenCondition = conditionSet[randomIndex]
+        } while self.shownConditions.contains(chosenCondition.name)
+        
+        return chosenCondition
+    }
+    
+    func setConditionImage(imageName:String) {
+        self.earImageView.image = UIImage(named: self.presentedCondition.imageName)
     }
     
     func startHandlingAttitudeChanges() {
@@ -53,9 +81,13 @@ class SimulatorViewController: UIViewController {
                 sSelf.centreYawValue = deviceMotion.attitude.yaw
             }
             
-            sSelf.yCentreConstraint.constant = sSelf.attitudeValueToConstraintValue(deviceMotion.attitude.roll, centreValue: M_PI_2)
+            let isUpsideDown = deviceMotion.attitude.roll < 0
+            let rollValue = !isUpsideDown ? deviceMotion.attitude.roll : -deviceMotion.attitude.roll
+            let pitchValue = !isUpsideDown ? deviceMotion.attitude.pitch : -deviceMotion.attitude.pitch
+
+            sSelf.yCentreConstraint.constant = sSelf.attitudeValueToConstraintValue(rollValue, centreValue: M_PI_2)
             sSelf.xCentreConstraint.constant = sSelf.startXCentreConstraintConstant + sSelf.attitudeValueToConstraintValue(deviceMotion.attitude.yaw, centreValue: sSelf.centreYawValue!)
-            sSelf.earImageView.transform = CGAffineTransformMakeRotation(CGFloat(deviceMotion.attitude.pitch))
+            sSelf.earImageView.transform = CGAffineTransformMakeRotation(CGFloat(pitchValue))
         }
     }
     
@@ -83,6 +115,7 @@ class SimulatorViewController: UIViewController {
     @IBAction func thumbUp(sender: AnyObject) {
         stopOtoscope()
     }
+    
     @IBAction func thumbUpOutside(sender: AnyObject) {
         stopOtoscope()
     }
@@ -93,13 +126,6 @@ class SimulatorViewController: UIViewController {
         self.moveOnLabel.hidden = false
         centreYawValue = nil
         startHandlingAttitudeChanges()
-        
-        self.view.layer.removeAllAnimations()
-        
-        UIView.animateWithDuration(0.3) {
-            self.answersLeftConstraint.constant = -self.answersTableView.frame.width
-            self.view.layoutIfNeeded()
-        }
     }
     
     func stopOtoscope() {
@@ -107,55 +133,36 @@ class SimulatorViewController: UIViewController {
         self.motionManager.stopDeviceMotionUpdates()
         self.moveOnLabel.hidden = true
         
-        self.view.layer.removeAllAnimations()
-        
-        UIView.animateWithDuration(0.3) {
-            self.answersLeftConstraint.constant = 0
-            self.view.layoutIfNeeded()
-        }
-
-    }
-}
-
-extension SimulatorViewController : UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        self.showAnswers()
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! AnswerCellView
-        
-        switch indexPath.row {
-        case 0:
-            cell.answerLabel.text = "Normal"
-            break
-        case 1:
-            cell.answerLabel.text = "Glomus tumour"
-            break
-        case 2:
-            cell.answerLabel.text = "Haemotympanum"
-            break
-        case 3:
-            cell.answerLabel.text = "Glomus tumour"
-            break
-        case 4:
-            cell.answerLabel.text = "Acute otitis media"
-            break
-        default:
-            cell.answerLabel.text = "Unknown"
-        }
-        
-        return cell
-    }
-}
-
-extension SimulatorViewController : UITableViewDelegate {
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func showAnswers() {
         guard let revealViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RevealViewController") as? RevealViewController else { return }
-        
-        let isRightAnswer = (indexPath.row == 4)
-        revealViewController.isRightAnswer = isRightAnswer
 
-        self.presentViewController(revealViewController, animated: true, completion: nil)
+        revealViewController.condition = self.presentedCondition
+        
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        
+        let answers = self.presentedCondition.testConditionName
+        
+        for answerName in answers {
+            let action = UIAlertAction(title: answerName, style: .Default) {
+                (alert: UIAlertAction!) -> Void in
+
+                let isRightAnswer = answerName == self.presentedCondition.name
+                
+                revealViewController.isRightAnswer = isRightAnswer
+                
+                self.presentViewController(revealViewController, animated: true, completion: nil)
+            }
+            
+            optionMenu.addAction(action)
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        optionMenu.addAction(cancelAction)
+        
+        self.presentViewController(optionMenu, animated: true, completion: nil)
     }
 }
+
