@@ -21,7 +21,7 @@ struct Conditions {
     
     static let OtitisMediaWithEffusion = Condition(name: "Otitis media with effusion", thumbnailName: "06_otitismedia_effusion_thumb.jpg", imageName: "06_otitismedia_effusion.jpg", testConditionName: ["Acute otitis media", "Haemotympanum", "Ottic barotrauma", "Otitis media with effusion"], informationText: "Otitis media with effusion is a very common condition in which the mucosal lining of the middle ear secretes fluid which may occur as a result of eustachian tube dysfunction. The condition is also known as ‘Glue Ear’.")
     
-    static let ForeignBodyInsect = Condition(name: "Foreign body (insect)", thumbnailName: "07_insect_thumb.jpg", imageName: "07_insect.jpg", testConditionName: ["Myringosclerosis", "Foreign body (insect)", "Otitis media", "Normal Tympanic Membrane"], informationText: "Different types of foreign body require different methods of removal. Insects should be killed prior to their removal. This can be down by using mineral oil or lidocaine.")
+    static let ForeignBodyInsect = Condition(name: "Foreign body (insect)", thumbnailName: "07_insect_thumb.jpg", imageName: "07_insect.jpg", testConditionName: ["Myringosclerosis", "Foreign body (insect)", "Otitis media", "Normal Tympanic Membrane"], informationText: "Different types of foreign body require different methods of removal. Insects should be killed prior to their removal. This can be done by using mineral oil or lidocaine.")
     
     static let TestSet = [Normal, AcuteOtitisMedia, Haemotympanum, TympanicMembranePerforation, Myringosclerosis, OtitisMediaWithEffusion, ForeignBodyInsect]
 }
