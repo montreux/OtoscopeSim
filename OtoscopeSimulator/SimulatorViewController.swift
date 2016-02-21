@@ -164,5 +164,17 @@ class SimulatorViewController: UIViewController {
         
         self.presentViewController(optionMenu, animated: true, completion: nil)
     }
+    
+    
+    @IBOutlet weak var ottoscopeLeftImageView: UIImageView!
+    @IBAction func earSelectionChanged(sender: UISegmentedControl) {
+        let isLeft = sender.selectedSegmentIndex == 0
+        
+        if isLeft {
+            self.ottoscopeLeftImageView.transform = CGAffineTransformIdentity
+        } else {
+            self.ottoscopeLeftImageView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+        }
+    }
 }
 
