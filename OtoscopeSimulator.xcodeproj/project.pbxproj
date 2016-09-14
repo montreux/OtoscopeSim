@@ -14,28 +14,12 @@
 		A14FE5361C5CD9C900C55D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14FE5341C5CD9C900C55D0F /* Main.storyboard */; };
 		A14FE5381C5CD9C900C55D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14FE5371C5CD9C900C55D0F /* Assets.xcassets */; };
 		A14FE53B1C5CD9C900C55D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14FE5391C5CD9C900C55D0F /* LaunchScreen.storyboard */; };
-		A14FE5461C5CD9C900C55D0F /* OttoscopeSimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14FE5451C5CD9C900C55D0F /* OttoscopeSimulatorTests.swift */; };
-		A14FE5511C5CD9C900C55D0F /* OttoscopeSimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14FE5501C5CD9C900C55D0F /* OttoscopeSimulatorUITests.swift */; };
 		A1850A501C78C71800D420E1 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1850A4F1C78C71800D420E1 /* Condition.swift */; };
 		A1850A521C78CC8A00D420E1 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1850A511C78CC8A00D420E1 /* Conditions.swift */; };
+		A1B06F201D8044B100DB4F6F /* LearnTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B06F1F1D8044B100DB4F6F /* LearnTableViewController.swift */; };
+		A1B06F221D80484600DB4F6F /* LearnDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B06F211D80484600DB4F6F /* LearnDetailViewController.swift */; };
+		A1B06F241D806CF400DB4F6F /* UnlockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B06F231D806CF400DB4F6F /* UnlockScreenViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A14FE5421C5CD9C900C55D0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A14FE5251C5CD9C900C55D0F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A14FE52C1C5CD9C900C55D0F;
-			remoteInfo = OttoscopeSimulator;
-		};
-		A14FE54D1C5CD9C900C55D0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A14FE5251C5CD9C900C55D0F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A14FE52C1C5CD9C900C55D0F;
-			remoteInfo = OttoscopeSimulator;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A11D7DF91C5E2DC2000E5106 /* AnswerCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCellView.swift; sourceTree = "<group>"; };
@@ -47,32 +31,15 @@
 		A14FE5371C5CD9C900C55D0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A14FE53A1C5CD9C900C55D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A14FE53C1C5CD9C900C55D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A14FE5411C5CD9C900C55D0F /* OtoscopeSimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtoscopeSimulatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A14FE5451C5CD9C900C55D0F /* OttoscopeSimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttoscopeSimulatorTests.swift; sourceTree = "<group>"; };
-		A14FE5471C5CD9C900C55D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A14FE54C1C5CD9C900C55D0F /* OtoscopeSimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtoscopeSimulatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A14FE5501C5CD9C900C55D0F /* OttoscopeSimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttoscopeSimulatorUITests.swift; sourceTree = "<group>"; };
-		A14FE5521C5CD9C900C55D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1850A4F1C78C71800D420E1 /* Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Condition.swift; path = Model/Condition.swift; sourceTree = "<group>"; };
 		A1850A511C78CC8A00D420E1 /* Conditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conditions.swift; path = Model/Conditions.swift; sourceTree = "<group>"; };
+		A1B06F1F1D8044B100DB4F6F /* LearnTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnTableViewController.swift; sourceTree = "<group>"; };
+		A1B06F211D80484600DB4F6F /* LearnDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnDetailViewController.swift; sourceTree = "<group>"; };
+		A1B06F231D806CF400DB4F6F /* UnlockScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnlockScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A14FE52A1C5CD9C900C55D0F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A14FE53E1C5CD9C900C55D0F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A14FE5491C5CD9C900C55D0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,8 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				A14FE52F1C5CD9C900C55D0F /* OtoscopeSimulator */,
-				A14FE5441C5CD9C900C55D0F /* OtoscopeSimulatorTests */,
-				A14FE54F1C5CD9C900C55D0F /* OtoscopeSimulatorUITests */,
 				A14FE52E1C5CD9C900C55D0F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,8 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				A14FE52D1C5CD9C900C55D0F /* OtoscopeSimulator.app */,
-				A14FE5411C5CD9C900C55D0F /* OtoscopeSimulatorTests.xctest */,
-				A14FE54C1C5CD9C900C55D0F /* OtoscopeSimulatorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,26 +77,11 @@
 				A14FE53C1C5CD9C900C55D0F /* Info.plist */,
 				A11D7DF91C5E2DC2000E5106 /* AnswerCellView.swift */,
 				A11D7DFB1C5E3E8D000E5106 /* RevealViewController.swift */,
+				A1B06F1F1D8044B100DB4F6F /* LearnTableViewController.swift */,
+				A1B06F211D80484600DB4F6F /* LearnDetailViewController.swift */,
+				A1B06F231D806CF400DB4F6F /* UnlockScreenViewController.swift */,
 			);
 			path = OtoscopeSimulator;
-			sourceTree = "<group>";
-		};
-		A14FE5441C5CD9C900C55D0F /* OtoscopeSimulatorTests */ = {
-			isa = PBXGroup;
-			children = (
-				A14FE5451C5CD9C900C55D0F /* OttoscopeSimulatorTests.swift */,
-				A14FE5471C5CD9C900C55D0F /* Info.plist */,
-			);
-			path = OtoscopeSimulatorTests;
-			sourceTree = "<group>";
-		};
-		A14FE54F1C5CD9C900C55D0F /* OtoscopeSimulatorUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A14FE5501C5CD9C900C55D0F /* OttoscopeSimulatorUITests.swift */,
-				A14FE5521C5CD9C900C55D0F /* Info.plist */,
-			);
-			path = OtoscopeSimulatorUITests;
 			sourceTree = "<group>";
 		};
 		A1850A4E1C78C6BC00D420E1 /* Model */ = {
@@ -165,42 +113,6 @@
 			productReference = A14FE52D1C5CD9C900C55D0F /* OtoscopeSimulator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A14FE5401C5CD9C900C55D0F /* OtoscopeSimulatorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A14FE5581C5CD9C900C55D0F /* Build configuration list for PBXNativeTarget "OtoscopeSimulatorTests" */;
-			buildPhases = (
-				A14FE53D1C5CD9C900C55D0F /* Sources */,
-				A14FE53E1C5CD9C900C55D0F /* Frameworks */,
-				A14FE53F1C5CD9C900C55D0F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A14FE5431C5CD9C900C55D0F /* PBXTargetDependency */,
-			);
-			name = OtoscopeSimulatorTests;
-			productName = OttoscopeSimulatorTests;
-			productReference = A14FE5411C5CD9C900C55D0F /* OtoscopeSimulatorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		A14FE54B1C5CD9C900C55D0F /* OtoscopeSimulatorUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A14FE55B1C5CD9C900C55D0F /* Build configuration list for PBXNativeTarget "OtoscopeSimulatorUITests" */;
-			buildPhases = (
-				A14FE5481C5CD9C900C55D0F /* Sources */,
-				A14FE5491C5CD9C900C55D0F /* Frameworks */,
-				A14FE54A1C5CD9C900C55D0F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A14FE54E1C5CD9C900C55D0F /* PBXTargetDependency */,
-			);
-			name = OtoscopeSimulatorUITests;
-			productName = OttoscopeSimulatorUITests;
-			productReference = A14FE54C1C5CD9C900C55D0F /* OtoscopeSimulatorUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,20 +120,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "John Holcroft";
 				TargetAttributes = {
 					A14FE52C1C5CD9C900C55D0F = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 32N726GGBJ;
-					};
-					A14FE5401C5CD9C900C55D0F = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = A14FE52C1C5CD9C900C55D0F;
-					};
-					A14FE54B1C5CD9C900C55D0F = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = A14FE52C1C5CD9C900C55D0F;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -239,8 +144,6 @@
 			projectRoot = "";
 			targets = (
 				A14FE52C1C5CD9C900C55D0F /* OtoscopeSimulator */,
-				A14FE5401C5CD9C900C55D0F /* OtoscopeSimulatorTests */,
-				A14FE54B1C5CD9C900C55D0F /* OtoscopeSimulatorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,20 +159,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A14FE53F1C5CD9C900C55D0F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A14FE54A1C5CD9C900C55D0F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -277,45 +166,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B06F201D8044B100DB4F6F /* LearnTableViewController.swift in Sources */,
 				A14FE5331C5CD9C900C55D0F /* SimulatorViewController.swift in Sources */,
 				A11D7DFA1C5E2DC2000E5106 /* AnswerCellView.swift in Sources */,
 				A14FE5311C5CD9C900C55D0F /* AppDelegate.swift in Sources */,
 				A11D7DFC1C5E3E8D000E5106 /* RevealViewController.swift in Sources */,
 				A1850A501C78C71800D420E1 /* Condition.swift in Sources */,
+				A1B06F241D806CF400DB4F6F /* UnlockScreenViewController.swift in Sources */,
+				A1B06F221D80484600DB4F6F /* LearnDetailViewController.swift in Sources */,
 				A1850A521C78CC8A00D420E1 /* Conditions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A14FE53D1C5CD9C900C55D0F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A14FE5461C5CD9C900C55D0F /* OttoscopeSimulatorTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A14FE5481C5CD9C900C55D0F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A14FE5511C5CD9C900C55D0F /* OttoscopeSimulatorUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A14FE5431C5CD9C900C55D0F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A14FE52C1C5CD9C900C55D0F /* OtoscopeSimulator */;
-			targetProxy = A14FE5421C5CD9C900C55D0F /* PBXContainerItemProxy */;
-		};
-		A14FE54E1C5CD9C900C55D0F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A14FE52C1C5CD9C900C55D0F /* OtoscopeSimulator */;
-			targetProxy = A14FE54D1C5CD9C900C55D0F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A14FE5341C5CD9C900C55D0F /* Main.storyboard */ = {
@@ -350,8 +213,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -395,8 +260,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -415,6 +282,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -431,6 +299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.montreux.otoscope-simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -446,55 +315,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.montreux.otoscope-simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		A14FE5591C5CD9C900C55D0F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = OttoscopeSimulatorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.montreux.OttoscopeSimulatorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OttoscopeSimulator.app/OttoscopeSimulator";
-			};
-			name = Debug;
-		};
-		A14FE55A1C5CD9C900C55D0F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = OttoscopeSimulatorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.montreux.OttoscopeSimulatorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OttoscopeSimulator.app/OttoscopeSimulator";
-			};
-			name = Release;
-		};
-		A14FE55C1C5CD9C900C55D0F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = OttoscopeSimulatorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.montreux.OttoscopeSimulatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = OttoscopeSimulator;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		A14FE55D1C5CD9C900C55D0F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = OttoscopeSimulatorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.montreux.OttoscopeSimulatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = OttoscopeSimulator;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -515,24 +337,6 @@
 			buildConfigurations = (
 				A14FE5561C5CD9C900C55D0F /* Debug */,
 				A14FE5571C5CD9C900C55D0F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A14FE5581C5CD9C900C55D0F /* Build configuration list for PBXNativeTarget "OtoscopeSimulatorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A14FE5591C5CD9C900C55D0F /* Debug */,
-				A14FE55A1C5CD9C900C55D0F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A14FE55B1C5CD9C900C55D0F /* Build configuration list for PBXNativeTarget "OtoscopeSimulatorUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A14FE55C1C5CD9C900C55D0F /* Debug */,
-				A14FE55D1C5CD9C900C55D0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

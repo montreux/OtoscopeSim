@@ -29,7 +29,7 @@ class RevealViewController : UIViewController {
         conditionImage.image = UIImage(named: condition.thumbnailName)
     }
     
-    @IBAction func nextButtonPressed(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

@@ -24,4 +24,19 @@ struct Conditions {
     static let ForeignBodyInsect = Condition(name: "Foreign body (insect)", thumbnailName: "07_insect_thumb.jpg", imageName: "07_insect.jpg", testConditionName: ["Myringosclerosis", "Foreign body (insect)", "Otitis media", "Normal Tympanic Membrane"], informationText: "Different types of foreign body require different methods of removal. Insects should be killed prior to their removal. This can be done by using mineral oil or lidocaine.")
     
     static let TestSet = [Normal, AcuteOtitisMedia, Haemotympanum, TympanicMembranePerforation, Myringosclerosis, OtitisMediaWithEffusion, ForeignBodyInsect]
+    
+    static let FreeConditions = [Normal, AcuteOtitisMedia, Haemotympanum]
+    
+    static var IsExtraContentUnlocked = false
+    
+    static func IsLocked(_ condition:Condition) -> Bool {
+        if IsExtraContentUnlocked {
+            return false
+        } else {
+            return !FreeConditions.contains { (testCondition) -> Bool in
+                return testCondition.name == condition.name
+            }
+        }
+        
+    }
 }

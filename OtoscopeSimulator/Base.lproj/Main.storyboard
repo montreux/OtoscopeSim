@@ -1,12 +1,191 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ify-jJ-anm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ify-jJ-anm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Learn Table View Controller-->
+        <scene sceneID="Dh3-uN-bAM">
+            <objects>
+                <tableViewController id="hw5-rK-aAg" customClass="LearnTableViewController" customModule="OtoscopeSimulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mde-lV-vRd">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Condition" textLabel="QZX-yj-xQG" imageView="M8P-hb-tlm" style="IBUITableViewCellStyleDefault" id="TtU-TY-c6C">
+                                <rect key="frame" x="0.0" y="92" width="667" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TtU-TY-c6C" id="CSE-fS-giL">
+                                    <frame key="frameInset" width="634" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QZX-yj-xQG">
+                                            <frame key="frameInset" minX="73" width="559" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="01_normal_thumb" id="M8P-hb-tlm">
+                                            <frame key="frameInset" minX="15" width="43" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="wR7-ha-ZhO" kind="show" id="N0s-Lf-XPt"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LockedCondition" textLabel="LfG-6m-b2L" detailTextLabel="Rad-5Z-3Pz" imageView="uyY-VF-gni" style="IBUITableViewCellStyleValue1" id="UJ2-hr-go8">
+                                <rect key="frame" x="0.0" y="136" width="667" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJ2-hr-go8" id="uvL-ng-bSh">
+                                    <frame key="frameInset" width="634" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LfG-6m-b2L">
+                                            <frame key="frameInset" minX="74" minY="12" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Unlock" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rad-5Z-3Pz">
+                                            <frame key="frameInset" minX="581" minY="12" width="51" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="02_otitismedia_thumb" id="uyY-VF-gni">
+                                            <frame key="frameInset" minX="15" width="44" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="fJc-Wy-6VM" kind="show" id="vJ5-hU-I2b"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hw5-rK-aAg" id="qDQ-F7-oub"/>
+                            <outlet property="delegate" destination="hw5-rK-aAg" id="zHp-QU-Sux"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="MRT-sw-gje"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLL-QE-QjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="498" y="-2187"/>
+        </scene>
+        <!--Learn Detail View Controller-->
+        <scene sceneID="fSW-hh-xwL">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="wR7-ha-ZhO" customClass="LearnDetailViewController" customModule="OtoscopeSimulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J46-HU-HMu"/>
+                        <viewControllerLayoutGuide type="bottom" id="qgZ-TP-31E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f6C-Oj-Tz7">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eo6-ie-Jdj">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="02_otitismedia_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="O9i-oa-zVQ">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="O9i-oa-zVQ" secondAttribute="height" multiplier="1:1" id="GSF-1Y-5Io"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acute otitis media is an infection of the middle ear. Typically characterised by a bulging tympanic membrane." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1d-ei-eQW">
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="d1d-ei-eQW" firstAttribute="centerY" secondItem="O9i-oa-zVQ" secondAttribute="centerY" id="QB8-6M-DLl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eo6-ie-Jdj" firstAttribute="leading" secondItem="f6C-Oj-Tz7" secondAttribute="leadingMargin" id="QiF-3E-X52"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="eo6-ie-Jdj" secondAttribute="bottom" id="s0t-Fy-kPr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eo6-ie-Jdj" secondAttribute="trailing" id="stA-3Z-4JR"/>
+                            <constraint firstItem="eo6-ie-Jdj" firstAttribute="top" secondItem="J46-HU-HMu" secondAttribute="bottom" id="v85-ng-42h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="conditionDescription" destination="d1d-ei-eQW" id="8fU-uM-oLR"/>
+                        <outlet property="conditionImageView" destination="O9i-oa-zVQ" id="q8G-vh-vZm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Rq-g1-Bhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452.5" y="-2213.5"/>
+        </scene>
+        <!--Unlock Screen View Controller-->
+        <scene sceneID="oud-Yt-Ctv">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="fJc-Wy-6VM" customClass="UnlockScreenViewController" customModule="OtoscopeSimulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8hN-V1-HV2"/>
+                        <viewControllerLayoutGuide type="bottom" id="OBE-C7-qo8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0QI-Jd-C11">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock screen goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcM-Pi-AxK">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySi-Q7-Aah">
+                                <state key="normal" title="Unlock"/>
+                                <connections>
+                                    <action selector="unlockButtonPressed" destination="fJc-Wy-6VM" eventType="touchUpInside" id="tLM-fC-WfB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OBE-C7-qo8" firstAttribute="top" secondItem="ySi-Q7-Aah" secondAttribute="bottom" constant="8" id="BIk-2R-1gO"/>
+                            <constraint firstItem="ySi-Q7-Aah" firstAttribute="centerX" secondItem="0QI-Jd-C11" secondAttribute="centerX" id="EeX-5n-we8"/>
+                            <constraint firstItem="RcM-Pi-AxK" firstAttribute="centerY" secondItem="0QI-Jd-C11" secondAttribute="centerY" id="pnl-cy-Hda"/>
+                            <constraint firstItem="RcM-Pi-AxK" firstAttribute="centerX" secondItem="0QI-Jd-C11" secondAttribute="centerX" id="uGa-fH-SiV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKo-5y-hgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452.5" y="-1792.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Qy6-7f-owh">
+            <objects>
+                <tabBarController id="Ba1-fD-2QY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="mtE-4E-Mue">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pP0-G5-1D7" kind="relationship" relationship="viewControllers" id="z2W-jm-WCb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cg5-m3-udo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1156" y="-1191"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="8Pk-dd-UC4">
             <objects>
@@ -20,121 +199,101 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold your phone like an otoscope" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npV-Uk-tWu">
-                                <rect key="frame" x="206" y="28" width="255.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_held_drawing" translatesAutoresizingMaskIntoConstraints="NO" id="cnD-Wc-IoZ">
-                                <rect key="frame" x="406" y="57" width="187.5" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cnD-Wc-IoZ" secondAttribute="height" multiplier="15:8" id="1QZ-rX-q8c"/>
                                     <constraint firstAttribute="height" constant="100" id="Tjh-za-jkI"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="otoscope_held_drawing" translatesAutoresizingMaskIntoConstraints="NO" id="BLQ-Kx-p0d">
-                                <rect key="frame" x="73" y="57" width="187.5" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="ZHi-6H-Gp1"/>
                                     <constraint firstAttribute="width" secondItem="BLQ-Kx-p0d" secondAttribute="height" multiplier="15:8" id="nlj-8d-lBN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try to identify these 5 conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rff-iS-ZRc">
-                                <rect key="frame" x="208" y="189" width="251" height="20.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bvU-Xm-SCr">
-                                <rect key="frame" x="20" y="218" width="627" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ubc-ak-yF9">
-                                        <rect key="frame" x="0.0" y="0.0" width="125.5" height="100"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01_normal_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="4Mh-7f-sFI">
-                                                <rect key="frame" x="12" y="0.0" width="100" height="82"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" priority="750" constant="100" id="BJM-lK-c7g"/>
                                                     <constraint firstAttribute="height" priority="750" constant="100" id="eUA-XU-OWp"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Normal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZp-ao-ddN">
-                                                <rect key="frame" x="37" y="82" width="50" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6yK-Ia-pui">
-                                        <rect key="frame" x="125" y="0.0" width="125.5" height="100"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02_otitismedia_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="l85-dT-e2V">
-                                                <rect key="frame" x="12" y="0.0" width="100" height="82"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="750" constant="100" id="5MH-1L-WP5"/>
                                                     <constraint firstAttribute="width" priority="750" constant="100" id="MIV-dm-9gk"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Acute otitis media" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiF-kG-AsF">
-                                                <rect key="frame" x="1" y="82" width="123" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bwN-Z3-Qzc">
-                                        <rect key="frame" x="251" y="0.0" width="125" height="100"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03_haemotympanum_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="h5L-QL-qpi">
-                                                <rect key="frame" x="12" y="0.0" width="100" height="82"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="750" constant="100" id="59H-Qh-vd0"/>
                                                     <constraint firstAttribute="width" priority="750" constant="100" id="n1O-15-IZE"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Haemotympanum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgG-Kz-q03">
-                                                <rect key="frame" x="2" y="82" width="121.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ihp-8v-6p9">
-                                        <rect key="frame" x="376" y="0.0" width="125.5" height="100"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="04_perforation_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="fiu-UY-q0m">
-                                                <rect key="frame" x="13" y="0.0" width="100" height="82"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" priority="750" constant="100" id="a59-dR-4OE"/>
                                                     <constraint firstAttribute="height" priority="750" constant="100" id="pNw-rp-75k"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="TM Perforation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxL-EO-jUC">
-                                                <rect key="frame" x="11" y="82" width="102.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UjS-Gq-aVr">
-                                        <rect key="frame" x="501" y="0.0" width="125.5" height="100"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="05_myringosclerosis_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="AcR-Et-Q3b">
-                                                <rect key="frame" x="13" y="0.0" width="100" height="82"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" priority="750" constant="100" id="4z1-Zt-f3Z"/>
                                                     <constraint firstAttribute="height" priority="750" constant="100" id="L2c-U6-t9X"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Myringosclerosis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTe-2c-7Of">
-                                                <rect key="frame" x="4" y="82" width="116.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -145,7 +304,6 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv4-fZ-K1N">
-                                <rect key="frame" x="308" y="326" width="51" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -153,7 +311,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="bvU-Xm-SCr" secondAttribute="trailing" id="5cY-Da-Pc0"/>
                             <constraint firstItem="cnD-Wc-IoZ" firstAttribute="centerX" secondItem="jgC-dy-TGQ" secondAttribute="centerX" multiplier="3/2" id="98O-pt-BYq"/>
@@ -181,8 +339,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nwe-Ob-6kM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,37 +356,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02_otitismedia" translatesAutoresizingMaskIntoConstraints="NO" id="Cyl-Iu-XeD">
-                                <rect key="frame" x="230" y="0.0" width="667" height="375"/>
-                            </imageView>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OttoscopeView" translatesAutoresizingMaskIntoConstraints="NO" id="l2J-Pv-YWl">
-                                <rect key="frame" x="503" y="128" width="121" height="120"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="02_otitismedia" translatesAutoresizingMaskIntoConstraints="NO" id="Cyl-Iu-XeD"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OttoscopeView" translatesAutoresizingMaskIntoConstraints="NO" id="l2J-Pv-YWl"/>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0j-eQ-0pB">
-                                <rect key="frame" x="0.0" y="248" width="667" height="127"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inp-Cl-VHx">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="128"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1o-I6-cfd">
-                                <rect key="frame" x="624" y="128" width="43" height="120"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdB-ZC-wJG">
-                                <rect key="frame" x="0.0" y="128" width="503" height="120"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Otoscope Left" translatesAutoresizingMaskIntoConstraints="NO" id="KAl-yv-3JG">
-                                <rect key="frame" x="0.0" y="0.0" width="647" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="375" id="NlD-gT-MOE"/>
                                     <constraint firstAttribute="width" constant="647" id="pqF-tk-3cR"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sic-2J-61C">
-                                <rect key="frame" x="136" y="103" width="231" height="169"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="231" id="3aY-sN-pIo"/>
@@ -239,11 +385,10 @@
                                 <string key="text">Hold thumb
 here</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQd-xU-rgr">
-                                <rect key="frame" x="136" y="103" width="231" height="169"/>
                                 <connections>
                                     <action selector="thumbDown:" destination="BYZ-38-t0r" eventType="touchDown" id="O9z-ud-np5"/>
                                     <action selector="thumbUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZcT-TK-r8i"/>
@@ -251,24 +396,22 @@ here</string>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release thumb to move on" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfd-tZ-v0c">
-                                <rect key="frame" x="232" y="28" width="203" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g1a-bn-7ZD">
-                                <rect key="frame" x="264" y="327" width="139" height="29"/>
                                 <segments>
                                     <segment title="Left Ear"/>
                                     <segment title="Right Ear"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.79552801724137934" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.79552801724137934" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="earSelectionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Dp2-FF-xqV"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="H0j-eQ-0pB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0HF-Ty-0Ah"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KAl-yv-3JG" secondAttribute="trailing" id="62E-b3-egS"/>
@@ -324,8 +467,6 @@ here</string>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="earImageView" destination="Cyl-Iu-XeD" id="XpW-pC-Pw4"/>
                         <outlet property="holdThumbHereLabel" destination="sic-2J-61C" id="K5V-o0-mFg"/>
@@ -353,7 +494,6 @@ here</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="02_otitismedia_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-Ta-R1J">
-                                <rect key="frame" x="35" y="93" width="262.5" height="262.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zbq-Ta-R1J" secondAttribute="height" multiplier="1:1" id="Q7c-GD-Jnt"/>
                                     <constraint firstAttribute="width" secondItem="Zbq-Ta-R1J" secondAttribute="height" multiplier="1:1" id="euc-xJ-lIo"/>
@@ -365,19 +505,16 @@ here</string>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acute otitis media" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlL-xS-d8Z">
-                                <rect key="frame" x="237" y="56" width="191.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Well Done!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-sv-woF">
-                                <rect key="frame" x="292" y="28" width="82.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lb-Ub-D8a">
-                                <rect key="frame" x="589" y="326" width="50" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
@@ -385,13 +522,12 @@ here</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acute otitis media is an infection of the middle ear. Typically characterised by a bulging tympanic membrane." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYn-Xv-fkh">
-                                <rect key="frame" x="335" y="109" width="304" height="91"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zYn-Xv-fkh" firstAttribute="top" secondItem="Zbq-Ta-R1J" secondAttribute="top" constant="16" id="59H-OP-yTT"/>
                             <constraint firstItem="la8-ko-ios" firstAttribute="top" secondItem="Zbq-Ta-R1J" secondAttribute="bottom" constant="19.5" id="6a9-jA-Uhu"/>
@@ -425,8 +561,6 @@ here</string>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="conditionDescriptionLabel" destination="zYn-Xv-fkh" id="bsH-1R-bo9"/>
                         <outlet property="conditionImage" destination="Zbq-Ta-R1J" id="Zty-H9-KCU"/>
@@ -437,6 +571,25 @@ here</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1p-mJ-LFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="263.5" y="794.5"/>
+        </scene>
+        <!--Learn-->
+        <scene sceneID="h0e-OE-TUU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pP0-G5-1D7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Learn" id="nM1-bb-hdC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SC3-p3-TQo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hw5-rK-aAg" kind="relationship" relationship="rootViewController" id="DEV-EG-QDz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRr-Da-gKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-314" y="-2187"/>
         </scene>
     </scenes>
     <resources>

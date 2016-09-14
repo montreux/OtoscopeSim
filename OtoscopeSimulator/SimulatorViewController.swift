@@ -26,17 +26,17 @@ class SimulatorViewController: UIViewController {
     var startXCentreConstraintConstant:CGFloat = 0
     
     var maxConstraintValue:CGFloat {
-        return UIScreen.mainScreen().bounds.height - ottoscopeImageView.frame.height
+        return UIScreen.main.bounds.height - ottoscopeImageView.frame.height
     }
     
     override func viewDidLoad() {
-        self.earImageView.hidden = true
+        self.earImageView.isHidden = true
         startXCentreConstraintConstant = self.xCentreConstraint.constant
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         guard (self.shownConditions.count != Conditions.TestSet.count) else {
-            self.dismissViewControllerAnimated(true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
             return
         }
         
@@ -44,10 +44,10 @@ class SimulatorViewController: UIViewController {
         self.shownConditions.append(presentedCondition.name)
 
         self.setConditionImage(presentedCondition.imageName)
-        self.holdThumbHereLabel.hidden = false
+        self.holdThumbHereLabel.isHidden = false
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         self.motionManager.stopDeviceMotionUpdates()
     }
     
@@ -65,15 +65,15 @@ class SimulatorViewController: UIViewController {
         return chosenCondition
     }
     
-    func setConditionImage(imageName:String) {
+    func setConditionImage(_ imageName:String) {
         self.earImageView.image = UIImage(named: self.presentedCondition.imageName)
     }
     
     func startHandlingAttitudeChanges() {
-        guard self.motionManager.deviceMotionAvailable else { return }
+        guard self.motionManager.isDeviceMotionAvailable else { return }
         
-        self.motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) {
-            [weak self](deviceMotion:CMDeviceMotion?, error:NSError?) -> Void in
+        self.motionManager.startDeviceMotionUpdates(to: OperationQueue.main) {
+            [weak self](deviceMotion:CMDeviceMotion?, error:Error?) -> () in
             
             guard let deviceMotion = deviceMotion, let sSelf = self else { return }
             
@@ -87,11 +87,11 @@ class SimulatorViewController: UIViewController {
 
             sSelf.yCentreConstraint.constant = sSelf.attitudeValueToConstraintValue(rollValue, centreValue: M_PI_2)
             sSelf.xCentreConstraint.constant = sSelf.startXCentreConstraintConstant + sSelf.attitudeValueToConstraintValue(deviceMotion.attitude.yaw, centreValue: sSelf.centreYawValue!)
-            sSelf.earImageView.transform = CGAffineTransformMakeRotation(CGFloat(pitchValue))
+            sSelf.earImageView.transform = CGAffineTransform(rotationAngle: CGFloat(pitchValue))
         }
     }
     
-    func attitudeValueToConstraintValue(currentValue:Double, centreValue:Double) -> CGFloat {
+    func attitudeValueToConstraintValue(_ currentValue:Double, centreValue:Double) -> CGFloat {
         let minValue = centreValue - 0.3
         let maxValue = centreValue + 0.3
         
@@ -102,78 +102,78 @@ class SimulatorViewController: UIViewController {
         return proportionToConstraintValue(proportion)
     }
     
-    func proportionToConstraintValue(proportion:Double) -> CGFloat {
+    func proportionToConstraintValue(_ proportion:Double) -> CGFloat {
         let newConstraintValue = (0.5 * maxConstraintValue) - CGFloat(proportion) * maxConstraintValue
 
         return newConstraintValue
     }
     
-    @IBAction func thumbDown(sender: AnyObject) {
+    @IBAction func thumbDown(_ sender: AnyObject) {
         startOtoscope()
     }
     
-    @IBAction func thumbUp(sender: AnyObject) {
+    @IBAction func thumbUp(_ sender: AnyObject) {
         stopOtoscope()
     }
     
-    @IBAction func thumbUpOutside(sender: AnyObject) {
+    @IBAction func thumbUpOutside(_ sender: AnyObject) {
         stopOtoscope()
     }
     
     func startOtoscope() {
-        self.earImageView.hidden = false
-        self.holdThumbHereLabel.hidden = true
-        self.moveOnLabel.hidden = false
+        self.earImageView.isHidden = false
+        self.holdThumbHereLabel.isHidden = true
+        self.moveOnLabel.isHidden = false
         centreYawValue = nil
         startHandlingAttitudeChanges()
     }
     
     func stopOtoscope() {
-        self.earImageView.hidden = true
+        self.earImageView.isHidden = true
         self.motionManager.stopDeviceMotionUpdates()
-        self.moveOnLabel.hidden = true
+        self.moveOnLabel.isHidden = true
         
         self.showAnswers()
     }
     
     func showAnswers() {
-        guard let revealViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RevealViewController") as? RevealViewController else { return }
+        guard let revealViewController = self.storyboard?.instantiateViewController(withIdentifier: "RevealViewController") as? RevealViewController else { return }
 
         revealViewController.condition = self.presentedCondition
         
-        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let answers = self.presentedCondition.testConditionName
         
         for answerName in answers {
-            let action = UIAlertAction(title: answerName, style: .Default) {
+            let action = UIAlertAction(title: answerName, style: .default) {
                 (alert: UIAlertAction!) -> Void in
 
                 let isRightAnswer = answerName == self.presentedCondition.name
                 
                 revealViewController.isRightAnswer = isRightAnswer
                 
-                self.presentViewController(revealViewController, animated: true, completion: nil)
+                self.present(revealViewController, animated: true, completion: nil)
             }
             
             optionMenu.addAction(action)
         }
 
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         optionMenu.addAction(cancelAction)
         
-        self.presentViewController(optionMenu, animated: true, completion: nil)
+        self.present(optionMenu, animated: true, completion: nil)
     }
     
     
     @IBOutlet weak var ottoscopeLeftImageView: UIImageView!
-    @IBAction func earSelectionChanged(sender: UISegmentedControl) {
+    @IBAction func earSelectionChanged(_ sender: UISegmentedControl) {
         let isLeft = sender.selectedSegmentIndex == 0
         
         if isLeft {
-            self.ottoscopeLeftImageView.transform = CGAffineTransformIdentity
+            self.ottoscopeLeftImageView.transform = CGAffineTransform.identity
         } else {
-            self.ottoscopeLeftImageView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+            self.ottoscopeLeftImageView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
         }
     }
 }
